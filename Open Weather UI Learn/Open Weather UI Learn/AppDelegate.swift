@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  UI_learn
+//  Open Weather UI Learn
 //
 //  Created by Sergey Melnik on 05.04.2022.
 //

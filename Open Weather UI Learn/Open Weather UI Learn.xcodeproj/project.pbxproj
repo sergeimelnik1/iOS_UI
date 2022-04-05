@@ -7,27 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09F0393B27FC4761005CA4E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0393A27FC4761005CA4E3 /* AppDelegate.swift */; };
-		09F0393D27FC4761005CA4E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0393C27FC4761005CA4E3 /* SceneDelegate.swift */; };
-		09F0393F27FC4761005CA4E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0393E27FC4761005CA4E3 /* ViewController.swift */; };
-		09F0394227FC4761005CA4E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F0394027FC4761005CA4E3 /* Main.storyboard */; };
-		09F0394427FC4763005CA4E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F0394327FC4763005CA4E3 /* Assets.xcassets */; };
-		09F0394727FC4763005CA4E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F0394527FC4763005CA4E3 /* LaunchScreen.storyboard */; };
+		09F0395B27FC5AFB005CA4E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0395A27FC5AFB005CA4E3 /* AppDelegate.swift */; };
+		09F0395D27FC5AFB005CA4E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0395C27FC5AFB005CA4E3 /* SceneDelegate.swift */; };
+		09F0395F27FC5AFB005CA4E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0395E27FC5AFB005CA4E3 /* ViewController.swift */; };
+		09F0396227FC5AFB005CA4E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F0396027FC5AFB005CA4E3 /* Main.storyboard */; };
+		09F0396427FC5AFC005CA4E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F0396327FC5AFC005CA4E3 /* Assets.xcassets */; };
+		09F0396727FC5AFC005CA4E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F0396527FC5AFC005CA4E3 /* LaunchScreen.storyboard */; };
+		09F0396F27FC5D20005CA4E3 /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0396E27FC5D20005CA4E3 /* LoginFormController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		09F0393727FC4761005CA4E3 /* UI_learn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UI_learn.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		09F0393A27FC4761005CA4E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		09F0393C27FC4761005CA4E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		09F0393E27FC4761005CA4E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		09F0394127FC4761005CA4E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		09F0394327FC4763005CA4E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		09F0394627FC4763005CA4E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		09F0394827FC4763005CA4E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09F0395727FC5AFB005CA4E3 /* Open Weather UI Learn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Open Weather UI Learn.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09F0395A27FC5AFB005CA4E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		09F0395C27FC5AFB005CA4E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		09F0395E27FC5AFB005CA4E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		09F0396127FC5AFB005CA4E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		09F0396327FC5AFC005CA4E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		09F0396627FC5AFC005CA4E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		09F0396827FC5AFC005CA4E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09F0396E27FC5D20005CA4E3 /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		09F0393427FC4761005CA4E3 /* Frameworks */ = {
+		09F0395427FC5AFB005CA4E3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,72 +39,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09F0392E27FC4761005CA4E3 = {
+		09F0394E27FC5AFB005CA4E3 = {
 			isa = PBXGroup;
 			children = (
-				09F0393927FC4761005CA4E3 /* UI_learn */,
-				09F0393827FC4761005CA4E3 /* Products */,
+				09F0395927FC5AFB005CA4E3 /* Open Weather UI Learn */,
+				09F0395827FC5AFB005CA4E3 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		09F0393827FC4761005CA4E3 /* Products */ = {
+		09F0395827FC5AFB005CA4E3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				09F0393727FC4761005CA4E3 /* UI_learn.app */,
+				09F0395727FC5AFB005CA4E3 /* Open Weather UI Learn.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		09F0393927FC4761005CA4E3 /* UI_learn */ = {
+		09F0395927FC5AFB005CA4E3 /* Open Weather UI Learn */ = {
 			isa = PBXGroup;
 			children = (
-				09F0393A27FC4761005CA4E3 /* AppDelegate.swift */,
-				09F0393C27FC4761005CA4E3 /* SceneDelegate.swift */,
-				09F0393E27FC4761005CA4E3 /* ViewController.swift */,
-				09F0394027FC4761005CA4E3 /* Main.storyboard */,
-				09F0394327FC4763005CA4E3 /* Assets.xcassets */,
-				09F0394527FC4763005CA4E3 /* LaunchScreen.storyboard */,
-				09F0394827FC4763005CA4E3 /* Info.plist */,
+				09F0395A27FC5AFB005CA4E3 /* AppDelegate.swift */,
+				09F0395C27FC5AFB005CA4E3 /* SceneDelegate.swift */,
+				09F0395E27FC5AFB005CA4E3 /* ViewController.swift */,
+				09F0396027FC5AFB005CA4E3 /* Main.storyboard */,
+				09F0396E27FC5D20005CA4E3 /* LoginFormController.swift */,
+				09F0396327FC5AFC005CA4E3 /* Assets.xcassets */,
+				09F0396527FC5AFC005CA4E3 /* LaunchScreen.storyboard */,
+				09F0396827FC5AFC005CA4E3 /* Info.plist */,
 			);
-			path = UI_learn;
+			path = "Open Weather UI Learn";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		09F0393627FC4761005CA4E3 /* UI_learn */ = {
+		09F0395627FC5AFB005CA4E3 /* Open Weather UI Learn */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 09F0394B27FC4763005CA4E3 /* Build configuration list for PBXNativeTarget "UI_learn" */;
+			buildConfigurationList = 09F0396B27FC5AFC005CA4E3 /* Build configuration list for PBXNativeTarget "Open Weather UI Learn" */;
 			buildPhases = (
-				09F0393327FC4761005CA4E3 /* Sources */,
-				09F0393427FC4761005CA4E3 /* Frameworks */,
-				09F0393527FC4761005CA4E3 /* Resources */,
+				09F0395327FC5AFB005CA4E3 /* Sources */,
+				09F0395427FC5AFB005CA4E3 /* Frameworks */,
+				09F0395527FC5AFB005CA4E3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = UI_learn;
-			productName = UI_learn;
-			productReference = 09F0393727FC4761005CA4E3 /* UI_learn.app */;
+			name = "Open Weather UI Learn";
+			productName = "Open Weather UI Learn";
+			productReference = 09F0395727FC5AFB005CA4E3 /* Open Weather UI Learn.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		09F0392F27FC4761005CA4E3 /* Project object */ = {
+		09F0394F27FC5AFB005CA4E3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
-					09F0393627FC4761005CA4E3 = {
+					09F0395627FC5AFB005CA4E3 = {
 						CreatedOnToolsVersion = 13.1;
 					};
 				};
 			};
-			buildConfigurationList = 09F0393227FC4761005CA4E3 /* Build configuration list for PBXProject "UI_learn" */;
+			buildConfigurationList = 09F0395227FC5AFB005CA4E3 /* Build configuration list for PBXProject "Open Weather UI Learn" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,55 +113,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 09F0392E27FC4761005CA4E3;
-			productRefGroup = 09F0393827FC4761005CA4E3 /* Products */;
+			mainGroup = 09F0394E27FC5AFB005CA4E3;
+			productRefGroup = 09F0395827FC5AFB005CA4E3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				09F0393627FC4761005CA4E3 /* UI_learn */,
+				09F0395627FC5AFB005CA4E3 /* Open Weather UI Learn */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		09F0393527FC4761005CA4E3 /* Resources */ = {
+		09F0395527FC5AFB005CA4E3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09F0394727FC4763005CA4E3 /* LaunchScreen.storyboard in Resources */,
-				09F0394427FC4763005CA4E3 /* Assets.xcassets in Resources */,
-				09F0394227FC4761005CA4E3 /* Main.storyboard in Resources */,
+				09F0396727FC5AFC005CA4E3 /* LaunchScreen.storyboard in Resources */,
+				09F0396427FC5AFC005CA4E3 /* Assets.xcassets in Resources */,
+				09F0396227FC5AFB005CA4E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		09F0393327FC4761005CA4E3 /* Sources */ = {
+		09F0395327FC5AFB005CA4E3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09F0393F27FC4761005CA4E3 /* ViewController.swift in Sources */,
-				09F0393B27FC4761005CA4E3 /* AppDelegate.swift in Sources */,
-				09F0393D27FC4761005CA4E3 /* SceneDelegate.swift in Sources */,
+				09F0395F27FC5AFB005CA4E3 /* ViewController.swift in Sources */,
+				09F0396F27FC5D20005CA4E3 /* LoginFormController.swift in Sources */,
+				09F0395B27FC5AFB005CA4E3 /* AppDelegate.swift in Sources */,
+				09F0395D27FC5AFB005CA4E3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		09F0394027FC4761005CA4E3 /* Main.storyboard */ = {
+		09F0396027FC5AFB005CA4E3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				09F0394127FC4761005CA4E3 /* Base */,
+				09F0396127FC5AFB005CA4E3 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		09F0394527FC4763005CA4E3 /* LaunchScreen.storyboard */ = {
+		09F0396527FC5AFC005CA4E3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				09F0394627FC4763005CA4E3 /* Base */,
+				09F0396627FC5AFC005CA4E3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +170,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		09F0394927FC4763005CA4E3 /* Debug */ = {
+		09F0396927FC5AFC005CA4E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -227,7 +231,7 @@
 			};
 			name = Debug;
 		};
-		09F0394A27FC4763005CA4E3 /* Release */ = {
+		09F0396A27FC5AFC005CA4E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -282,7 +286,7 @@
 			};
 			name = Release;
 		};
-		09F0394C27FC4763005CA4E3 /* Debug */ = {
+		09F0396C27FC5AFC005CA4E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -291,7 +295,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = E5A9RJ73G5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UI_learn/Info.plist;
+				INFOPLIST_FILE = "Open Weather UI Learn/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -302,7 +306,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "SergeyMelnik.UI-learn";
+				PRODUCT_BUNDLE_IDENTIFIER = "SergeyMelnik.Open-Weather-UI-Learn";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -310,7 +314,7 @@
 			};
 			name = Debug;
 		};
-		09F0394D27FC4763005CA4E3 /* Release */ = {
+		09F0396D27FC5AFC005CA4E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -319,7 +323,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = E5A9RJ73G5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UI_learn/Info.plist;
+				INFOPLIST_FILE = "Open Weather UI Learn/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -330,7 +334,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "SergeyMelnik.UI-learn";
+				PRODUCT_BUNDLE_IDENTIFIER = "SergeyMelnik.Open-Weather-UI-Learn";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -341,25 +345,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		09F0393227FC4761005CA4E3 /* Build configuration list for PBXProject "UI_learn" */ = {
+		09F0395227FC5AFB005CA4E3 /* Build configuration list for PBXProject "Open Weather UI Learn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				09F0394927FC4763005CA4E3 /* Debug */,
-				09F0394A27FC4763005CA4E3 /* Release */,
+				09F0396927FC5AFC005CA4E3 /* Debug */,
+				09F0396A27FC5AFC005CA4E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		09F0394B27FC4763005CA4E3 /* Build configuration list for PBXNativeTarget "UI_learn" */ = {
+		09F0396B27FC5AFC005CA4E3 /* Build configuration list for PBXNativeTarget "Open Weather UI Learn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				09F0394C27FC4763005CA4E3 /* Debug */,
-				09F0394D27FC4763005CA4E3 /* Release */,
+				09F0396C27FC5AFC005CA4E3 /* Debug */,
+				09F0396D27FC5AFC005CA4E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 09F0392F27FC4761005CA4E3 /* Project object */;
+	rootObject = 09F0394F27FC5AFB005CA4E3 /* Project object */;
 }
