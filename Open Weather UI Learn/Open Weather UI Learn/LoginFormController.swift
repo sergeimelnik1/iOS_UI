@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginFormController: UIViewController {
     
@@ -19,7 +20,7 @@ class LoginFormController: UIViewController {
             let password = passwordInput.text!
             
             // проверяем верны ли они
-            if login == "admin" && password == "123456" {
+            if login == "admin" && password == "1" {
                 print("успешная авторизация")
             } else {
                 print("неуспешная авторизация")
@@ -54,7 +55,7 @@ class LoginFormController: UIViewController {
             let login = loginInput.text!
             let password = passwordInput.text!
             
-            if login == "admin" && password == "123456" {
+            if login == "admin" && password == "1" {
                 return true
             } else {
                 return false
