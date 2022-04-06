@@ -1,0 +1,18 @@
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "HnW-sE-y69"; */
+"HnW-sE-y69.title" = "Title";
+
+/* Class = "UILabel"; text = "Логин"; ObjectID = "IH5-Yj-9gd"; */
+"IH5-Yj-9gd.text" = "Логин";
+
+/* Class = "UILabel"; text = "Пароль"; ObjectID = "p8X-J6-PPN"; */
+"p8X-J6-PPN.text" = "Пароль";
+
+/* Class = "UILabel"; text = "WEATHER"; ObjectID = "rgA-Bg-Dvi"; */
+"rgA-Bg-Dvi.text" = "WEATHER";
+
+/* Class = "UIButton"; configuration.title = "Войти"; ObjectID = "x4N-Cu-UW1"; */
+"x4N-Cu-UW1.configuration.title" = "Войти";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "x4N-Cu-UW1"; */
+"x4N-Cu-UW1.normalTitle" = "Button";
