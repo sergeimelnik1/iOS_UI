@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0902483427FF452D00B6DE18 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0902483327FF452D00B6DE18 /* Weather.swift */; };
 		0904D14F27FD95EE00B216DC /* MyCityesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904D14E27FD95EE00B216DC /* MyCityesController.swift */; };
 		0904D15127FD95F700B216DC /* MyCityesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904D15027FD95F700B216DC /* MyCityesCell.swift */; };
 		0904D15427FDC2E200B216DC /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904D15327FDC2E200B216DC /* WeatherViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0902483327FF452D00B6DE18 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		0904D14E27FD95EE00B216DC /* MyCityesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCityesController.swift; sourceTree = "<group>"; };
 		0904D15027FD95F700B216DC /* MyCityesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCityesCell.swift; sourceTree = "<group>"; };
 		0904D15327FDC2E200B216DC /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				095CE78327FDE5100008C90B /* WeatherService.swift */,
+				0902483327FF452D00B6DE18 /* Weather.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				0904D15427FDC2E200B216DC /* WeatherViewController.swift in Sources */,
 				095CE78427FDE5100008C90B /* WeatherService.swift in Sources */,
 				0904D15627FDC2EE00B216DC /* WeatherCell.swift in Sources */,
+				0902483427FF452D00B6DE18 /* Weather.swift in Sources */,
 				0904D14F27FD95EE00B216DC /* MyCityesController.swift in Sources */,
 				09F0396F27FC5D20005CA4E3 /* LoginFormController.swift in Sources */,
 				09F0397827FD8B43005CA4E3 /* AllCityesCell.swift in Sources */,
