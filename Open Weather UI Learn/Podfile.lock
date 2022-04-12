@@ -9,8 +9,8 @@ PODS:
   - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
-  - Alamofire
-  - RealmSwift
+  - Alamofire (~> 5.5)
+  - RealmSwift (~> 10.25)
   - SwiftKeychainWrapper
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
@@ -37,6 +37,6 @@ SPEC CHECKSUMS:
   SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 2f94ae8bda8ac5dee62c6d6a7ddaeaf989e3e3d2
+PODFILE CHECKSUM: e1456c45bf73709bf2582c84fcfcdcac561a47b7
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

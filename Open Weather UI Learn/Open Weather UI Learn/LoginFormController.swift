@@ -26,13 +26,11 @@ class LoginFormController: UIViewController {
                 print("неуспешная авторизация")
             }
         }
-//    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue) {
-//
-//    }
-
+    
     override func viewDidLoad() {
             super.viewDidLoad()
-         
+            overrideUserInterfaceStyle = .light
+
             // жест нажатия
             let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboard))
             // присваиваем его UIScrollVIew
@@ -117,16 +115,4 @@ class LoginFormController: UIViewController {
         scrollView?.contentInset = contentInsets
         scrollView?.scrollIndicatorInsets = contentInsets
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }

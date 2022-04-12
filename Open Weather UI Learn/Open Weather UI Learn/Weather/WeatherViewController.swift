@@ -6,84 +6,57 @@
 //
 
 import UIKit
-import Alamofire
+import RealmSwift
 
-class WeatherViewController: UICollectionViewController {
-
+class WeatherViewController: UIViewController, UICollectionViewDataSource {
+    
+    @IBOutlet var collectionView: UICollectionView!
     // создаем экземпляр сервиса
-        let weatherService = WeatherService()
-
-        override func viewDidLoad() {
-            super.viewDidLoad()
+    let weatherService = WeatherService()
+    let dateFormatter = DateFormatter()
+    var cityName = ""
+    var weathers: [Weather] = []
+    var cityes: Results<City>?
+    var token: NotificationToken?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(loadWeathers(notification:)), name: NSNotification.Name(rawValue: "LoadWeathers"), object: nil)
             
-    // отправим запрос для получения погоды для москвы
-            weatherService.loadWeatherData(city: "Moscow")
-            
-        }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        self.overrideUserInterfaceStyle = .light
+        self.collectionView.dataSource = self
+        //запрос на получение погоды из выбранного города
+        weatherService.loadWeatherData(city: cityName)
     }
-    */
-
-    // MARK: UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+    
+    @objc func loadWeathers(notification: Notification) {
+        if let weathers = notification.object as? [Weather] {
+            self.weathers = weathers
+            collectionView.reloadData()
+        }
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-
-
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 10
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherCell", for: indexPath) as! WeatherCell
-        
-            cell.weather.text = "30 C"
-            cell.time.text = "30.08.2017 18:00"
-        
-            return cell
-        }
-
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.weathers.count
     }
-    */
-
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherCell", for: indexPath) as! WeatherCell
+        
+        let weather = weathers[indexPath.row]
+        
+        cell.weather.text = "\(String(describing: weather.temp)) C"
+        dateFormatter.dateFormat = "dd.MM.yyyy HH.mm"
+        let date = Date(timeIntervalSince1970: weather.date )
+        let stringDate = dateFormatter.string(from: date)
+        cell.time.text = stringDate
+        
+        cell.icon.image = UIImage(named: weather.weatherIcon )
+        return cell
+    }
 }

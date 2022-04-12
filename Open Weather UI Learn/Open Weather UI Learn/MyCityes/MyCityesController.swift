@@ -7,141 +7,120 @@
 
 import UIKit
 import Alamofire
-
-
+import RealmSwift
 
 class MyCityesController: UITableViewController {
-
-    var cityes = [String]()
     
+    var cityes: Results<City>?
+    var token: NotificationToken?
     
-    @IBAction func addCity(segue: UIStoryboardSegue) {
-            
-            // Проверяем идентификатор перехода, чтобы убедиться, что это нужный переход
-            if segue.identifier == "addCity" {
-            // получаем ссылку на контроллер с которого осуществлен переход
-                let allCityesController = segue.source as! AllCityesController
-                
-            // получаем индекс выделенной ячейки
-                if let indexPath = allCityesController.tableView.indexPathForSelectedRow {
-            // получаем город по индексу
-                    let city = allCityesController.cityes[indexPath.row]
-                    
-            // Проверяем что такого города нет в списке
-                    if !cityes.contains(city) {
-            // добавляем город в список выбранных городов
-                        cityes.append(city)
-            // обновляем таблицу
-                        tableView.reloadData()
-                    }
-                }
-            }
+    @IBAction func addButtonPressed(_ sender: Any) {
+        showAddCityForm()
+    }
+    
+    func addCity(name: String) {
+        let newCity = City()
+        newCity.name = name.uppercased()
+        do {
+            let realm = try Realm()
+            realm.beginWrite()
+            realm.add(newCity, update: .all)
+            try realm.commitWrite()
+            print(realm.configuration.fileURL)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "AddCity"), object: nil)
+        } catch {
+            print(error)
         }
-
-
-
-
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        overrideUserInterfaceStyle = .light
+        
+        // отправим запрос для получения погоды для Москвы
+        //            weatherService.loadWeatherData(city: cityName)
+        pairTableAndRealm()
+    }
+    //тут всплывашка
+    func showAddCityForm() {
+        let alertController = UIAlertController(title: "Введите город", message: nil, preferredStyle: .alert)
+        alertController.addTextField(configurationHandler: {(_ textField: UITextField) -> Void in
+        })
+        let confirmAction = UIAlertAction(title: "Добавить", style: .default) { [weak self] action in
+            guard let name = alertController.textFields?[0].text else { return }
+            self?.addCity(name: name)
+        }
+        alertController.addAction(confirmAction)
+        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: {  })
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            
-            // получаем ячейку из пула
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MyCityesCell", for: indexPath) as! MyCityesCell
-            // получаем город для конкретной строки
-            let city = cityes[indexPath.row]
-            
-            // устанавливаем город в надпись ячейки
-            cell.cityName.text = city
-            
-            return cell
-        }
-
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-           return 1
-       }
-       
-       override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-           return cityes.count
-       }
-       
-       
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-            // если была нажата кнопка удалить
-            if editingStyle == .delete {
-            // мы удаляем город из массива
-                cityes.remove(at: indexPath.row)
-            // и удаляем строку из таблицы
-                tableView.deleteRows(at: [indexPath], with: .fade)
-            }
-        }
-
-
-    // MARK: - Table view data source
-
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        
+        // получаем ячейку из пула
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCityesCell", for: indexPath) as! MyCityesCell
+        // получаем город для конкретной строки
+        let city = cityes?[indexPath.row]
+        // устанавливаем город в надпись ячейки
+        cell.cityName.text = city?.name
+        
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
-    */
-
-    /*
-    // Override to support editing the table view.
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cityes?.count ?? 1
+    }
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let city = cityes?[indexPath.row]
         if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            do {
+                let realm = try Realm()
+                realm.beginWrite()
+                realm.delete(city!.weathers)
+                realm.delete(city!)
+                try realm.commitWrite()
+            } catch {
+                print(error)
+            }
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toWeatherViewController", let cell = sender as? UITableViewCell {
+            let ctrl = segue.destination as! WeatherViewController
+            if let indexPath = tableView.indexPath(for: cell) {
+                ctrl.cityName = cityes?[indexPath.row].name ?? ""
+            }
+        }
     }
-    */
-
+    
+    @objc func addCities() {
+        guard let realm = try? Realm() else { return }
+        cityes = realm.objects(City.self)
+        tableView.reloadData()
+    }
+    
+    func pairTableAndRealm() {
+        guard let realm = try? Realm() else { return }
+        cityes = realm.objects(City.self)
+        NotificationCenter.default.addObserver(self, selector: #selector(addCities), name: NSNotification.Name(rawValue: "AddCity"), object: nil)
+        
+        token = realm.observe( { [unowned self] note, realm in
+            switch note {
+            case .didChange:
+                tableView.reloadData()
+                break
+            case .refreshRequired:
+                tableView.beginUpdates()
+                break
+            }
+            self.tableView.reloadData()
+        })
+    }
 }
